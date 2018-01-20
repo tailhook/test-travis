@@ -1,7 +1,11 @@
 cache:
 - .vagga
 
+install:
+- 'curl -sSf https://files.zerogw.com/vagga/vagga-0.8.0-67-g4470648.tar.xz > vagga-0.8.0-67-g4470648.tar.xz'
+- 'tar -xJf vagga-0.8.0-67-g4470648.tar.xz'
+- 'cd vagga'
+- './install.sh --prefix=~/.bin'
 script:
-- 'curl -sSf https://files.zerogw.com/vagga/vagga-install-testing.sh | sh'
 - 'vagga _check_overlayfs_support || true'
 - vagga test
