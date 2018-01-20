@@ -1,0 +1,7 @@
+cache:
+- .vagga
+
+script:
+- 'curl -sSf https://files.zerogw.com/vagga/vagga-install-testing.sh | sh'
+- 'vagga _check_overlayfs_support || true'
+- vagga test

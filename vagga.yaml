@@ -1,0 +1,11 @@
+containers:
+  alpine:
+    setup:
+    - !Alpine v3.7
+    - !Install [bc]
+
+commands:
+  test: !Command
+    container: alpine
+    run: |
+      echo 2*7 | bc
