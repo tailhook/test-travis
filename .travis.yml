@@ -10,6 +10,7 @@ install:
 - 'tar -xJf vagga-0.8.0-67-g4470648.tar.xz'
 - 'mkdir ~/.bin'
 - 'cp vagga/vagga vagga/apk vagga/busybox vagga/alpine-keys.apk ~/.bin'
+- 'ls -la /usr/bin/new*idmap'
 script:
 - 'export PATH=~/.bin:$PATH'
 - 'env'
