@@ -4,7 +4,9 @@ cache:
 install:
 - 'curl -sSf https://files.zerogw.com/vagga/vagga-0.8.0-67-g4470648.tar.xz > vagga-0.8.0-67-g4470648.tar.xz'
 - 'tar -xJf vagga-0.8.0-67-g4470648.tar.xz'
+- 'mkdir ~/.bin'
 - 'cp vagga/vagga vagga/apk vagga/busybox vagga/alpine-keys.apk ~/.bin'
 script:
+- 'env'
 - 'vagga _check_overlayfs_support || true'
 - vagga test
