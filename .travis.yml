@@ -7,6 +7,7 @@ install:
 - 'mkdir ~/.bin'
 - 'cp vagga/vagga vagga/apk vagga/busybox vagga/alpine-keys.apk ~/.bin'
 script:
+- 'export PATH=~/.bin:$PATH'
 - 'env'
 - 'vagga _check_overlayfs_support || true'
 - vagga test
